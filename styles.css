@@ -255,6 +255,12 @@ ul {
   padding: 0 20px;
   text-align: center;
   overflow: hidden;
+  isolation: isolate;
+}
+.hero-line,
+.hero-cue {
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .hero {
@@ -266,7 +272,7 @@ ul {
 .hero-media {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
 }
 .hero-img {
   width: 100%;
