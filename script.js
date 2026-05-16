@@ -43,18 +43,20 @@
   });
   gsap.from(".nav", { y: -20, opacity: 0, duration: 0.8, ease: "power2.out" });
 
-  /* Hero image parallax + scale */
-  gsap.to(".hero-img", {
-    yPercent: 16,
-    scale: 1.12,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-  });
+  /* Hero image parallax + scale (disabled on mobile to prevent overflow) */
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    gsap.to(".hero-img", {
+      yPercent: 16,
+      scale: 1.12,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }
 
   /* Generic reveals */
   gsap.utils.toArray(".reveal").forEach(function (el) {
