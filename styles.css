@@ -248,10 +248,20 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100svh;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  min-height: 520px;
+  max-height: 100svh;
   padding: 0 20px;
   text-align: center;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: 100svh;
+    max-height: none;
+  }
 }
 .hero-media {
   position: absolute;
