@@ -275,7 +275,7 @@ ul {
     overflow: hidden;
   }
   .hero-img {
-    transform: none;
+    transform: scale(1.08) translate(-2%, -4%);
     object-fit: cover;
     object-position: center;
   }
